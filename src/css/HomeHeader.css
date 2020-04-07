@@ -1,0 +1,40 @@
+.Headerbg {
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0;
+    padding: 0.5rem 0;
+    border-width: 2px;
+    border-radius: 10px;
+    /*filter: saturate(0.9);*/
+    text-shadow: 3px 3px 4px black;
+     z-index: 2;
+}
+
+
+.rainbow {
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    font-weight: 400!important;
+    z-index:5;
+}
+
+@media screen and (max-width: 960px) {
+    .frostglass {
+        top: 3rem;
+        left: 40%;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .frostglass {
+        top: 1.5rem;
+        left: 30%;
+        width: 50%;
+    }
+    .Headerbg {
+        margin: 0 2rem;
+    }
+}

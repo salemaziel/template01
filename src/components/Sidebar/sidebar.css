@@ -1,0 +1,18 @@
+li.NavItems {
+    margin: 0;
+}
+
+li.NavItems:hover {
+    cursor: pointer;
+    color: red;
+
+}
+
+#nav ul li a:hover {
+    color: rgba(172, 52, 52, 0.986);
+    font-weight: 500;
+}
+/*
+#header::-webkit-scrollbar { 
+    display: none; 
+}*/
