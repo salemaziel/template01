@@ -5,7 +5,8 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components"
 import SideBar from '../components/Sidebar/index'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -35,15 +36,24 @@ const Description = styled.p`
 
 const Dropdown = styled.select`
   display: block;
-  padding: 10px;
-  margin: 10px 0;
-  background: whitesmoke;
+  padding: 20px;
+  margin: 1rem 1rem 3rem 0;
+  background-color: #9ececc;
   font-weight: 700;
   border: 2px;
   border-width: 2px 2px 2px solid;
   border-radius: 5px;
   outline: none;
-  color: purple;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15)), url(../assets/images/overlay.png);
+  transition: background-color 0.35s ease-in-out;
+
+    &:hover {
+      background-color: #70cac6;
+      transition: background-color 0.35s ease-in-out;
+    }
 `
 const DropdownOption = styled.option`
   padding: 10px;
@@ -51,14 +61,20 @@ const DropdownOption = styled.option`
   font-weight: 700;
   border: none;
   outline: none;
-  color: purple;
+  color: #70cac6;
+
 `
 
 const BuyButton = styled.button`
   padding: 20px;
-  background: purple;
+  background: #F39B6D;
   font-weight: 700;
-  margin: 1rem 0 3rem;
+  margin: 1rem 1rem 3rem;
+  font-size: 0.8rem;
+
+  &:hover {
+    background: #f67e3f;
+  }
 `
 
 class Product extends React.Component {
@@ -104,13 +120,18 @@ class Product extends React.Component {
 
         <Price>${this.updatePrice(product.frontmatter.price, product.frontmatter.customField.values)}</Price>
         <Description>{product.frontmatter.description}</Description>
+        <div style={{display: 'flex', flexDirection: 'row!important'}}>
+
+        
         <Dropdown
           id={product.frontmatter.customField.name}
           onChange={(e) => this.setSelected(e.target.value)}
           value={this.state.selected}>
           {product.frontmatter.customField.values.map((option) => (<DropdownOption key={option.name}>{option.name}</DropdownOption>))}
-          
+           <span><FontAwesomeIcon icon={faAngleDown} style={{ /*margin: '2rem 0 0 -2rem',*/color: 'white' }} /></span>
         </Dropdown>
+        <FontAwesomeIcon icon={faAngleDown} style={{ margin: '2rem 0 0 -2rem',color: 'white' }} />
+        
 
         <BuyButton
           className='snipcart-add-item'
@@ -123,10 +144,11 @@ class Product extends React.Component {
           data-item-custom1-name={product.frontmatter.customField ? product.frontmatter.customField.name : null}
           data-item-custom1-options={this.createString(product.frontmatter.customField.values)}
           data-item-custom1-value={this.state.selected}>
-          
-            <span className="icon fa-cart-plus" />
-            Add to basket
+           
+            <span className="icon fa-cart-plus" /><br />
+            Add To Cart  <br />
         </BuyButton>
+        </div>
         </div>
         
         </div>

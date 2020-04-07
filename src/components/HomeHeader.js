@@ -12,7 +12,7 @@ class HomeHeader extends React.Component {
                             <br />
                         </h2>
                         <h3 className="alt" style={{textShadow: '3px 3px 4px black',}}>
-                            Developer and Designer
+                            Human and Deity
                         </h3>    
                         <icon className="fa fa-hand-peace-o" 
                         style={{
