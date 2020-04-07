@@ -8,7 +8,7 @@ class HomeHeader extends React.Component {
                 <header>
                     
                         <h2 className="alt">
-                            Hi! I'm _______________{/*<span className="rainbow">__________</span>*/}
+                            Hi, I'm _______________{/*<span className="rainbow">__________</span>*/}
                             <br />
                         </h2>
                         <h3 className="alt" style={{textShadow: '3px 3px 4px black',}}>

@@ -65,7 +65,7 @@ const IndexPage = () => (
       <section id="portfolio" className="two">
         <div className="container">
           <header>
-            <h2>I am Me :)</h2>
+            <h2>I am You</h2>
           </header>
 
           <p>

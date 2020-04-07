@@ -176,9 +176,9 @@ const ContactPage = () => (
             </div>
           </form>
         </div>
-        <Row style={{ justifyContent: 'center', alignContent: 'center', textAlign: 'center', margin: '3rem 0 0 0'}}>
-        <Footer socialLinks={config.socialLinks} />
-        </Row>
+        <div style={{ justifyContent: 'center', alignContent: 'center', textAlign: 'center', margin: '3rem 0 0 0'}}>
+        <Footer socialLinks={config.socialLinks} style={{margin: '0!important', padding: '0!important'}}/>
+        </div>
       </section>
     </div>
 
