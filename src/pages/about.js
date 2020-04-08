@@ -7,6 +7,8 @@ import Pic8 from '../assets/images/pic08.jpg';
 import InstagramEmbed from 'react-instagram-embed';
 
 import { Container, Row, Col } from 'reactstrap';
+import '../css/about.css'
+
 
 const About = () => (
   <Layout>
@@ -39,14 +41,7 @@ const About = () => (
           <br />
           <hr />
           <br />
-          <div
-            style={{
-              display: 'flex',
-              alignContent: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
-            }}
-          >
+          <div className="MoreAbout">
             <InstagramEmbed
               url="https://www.instagram.com/p/B58p_UBjd19/"
               maxWidth={320}
@@ -58,8 +53,9 @@ const About = () => (
               onSuccess={() => {}}
               onAfterRender={() => {}}
               onFailure={() => {}}
+              /*style={{margin:'auto'}}*/
             />
-            <div style={{margin: '0 2rem 8rem'}}>
+            <div style={{margin: '5px 2rem 8rem'}}>
                 <h4 style={{color: 'gray!important', fontSize: '1.5rem'}}>More About Me</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim

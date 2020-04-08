@@ -1,0 +1,19 @@
+div.MoreAbout {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    div.MoreAbout {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+}
